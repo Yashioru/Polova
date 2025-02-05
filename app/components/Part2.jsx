@@ -46,8 +46,8 @@ const Part2 = () => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="w-full h-auto bg-slate-500">
-        <h1 className="text-6xl font-bold w-auto flex justify-center">
+      <div className="w-auto h-auto bg-slate-500">
+        <h1 className="text-5xl font-bold w-auto flex justify-center">
           Překladatelství
         </h1>
         <div className="h-px bg-white w-1/2 absolute  right-1/4 "></div>

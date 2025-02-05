@@ -37,7 +37,7 @@ const Part1 = () => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="w-full h-auto bg-blue-800">
+      <div className="w-auto h-auto bg-blue-800">
         <h1 className="text-6xl font-bold w-auto flex justify-center">Info</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque
