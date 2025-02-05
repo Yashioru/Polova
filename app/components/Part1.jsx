@@ -1,11 +1,44 @@
-import React, { useEffect, useState } from "react";
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 
 const Part1 = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const part1Ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (part1Ref.current) {
+      observer.observe(part1Ref.current);
+    }
+
+    return () => {
+      if (part1Ref.current) {
+        observer.unobserve(part1Ref.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="">
+    <div
+      id="part1"
+      ref={part1Ref}
+      className={`transition-opacity duration-1000 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
       <div className="w-full h-screen bg-blue-800">
-        <div id="part1" className=""></div>
-        <h1 className="text-6xl font-bold w-full flex justify-center ">Info</h1>
+        <h1 className="text-6xl font-bold w-full flex justify-center">Info</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque
           ipsum. Vestibulum fermentum tortor id mi. Mauris dictum facilisis
@@ -31,8 +64,6 @@ const Part1 = () => {
           asperiores repellat.
         </p>
       </div>
-
-      <div></div>
     </div>
   );
 };
