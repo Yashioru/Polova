@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nejlpeší překlady Polova",
+  title: "Nejlepší překlady Polova",
   description:
-    "Nemusíte umět polsky nebo slovesnost českou, naše překlady se navždy lesknout",
+    "Nemusíte umět Polsky nebo slovesnost českou, naše překlady se navždy lesknout",
 };
 
 export default function RootLayout({
