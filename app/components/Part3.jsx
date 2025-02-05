@@ -38,7 +38,7 @@ const Part3 = () => {
       }`}
     >
       <div className="w-full h-screen bg-blue-800">
-        <h1 className="text-6xl font-bold w-full flex justify-center">IDK</h1>
+        <h1 className="text-6xl font-bold w-auto flex justify-center">IDK</h1>
         <p>man</p>
       </div>
     </div>

@@ -38,7 +38,7 @@ const Part4 = () => {
       }`}
     >
       <div className="w-full h-screen bg-blue-800">
-        <h1 className="text-6xl font-bold w-full flex justify-center">
+        <h1 className="text-6xl font-bold w-auto flex justify-center">
           Kontakt
         </h1>
         <p>Yo</p>

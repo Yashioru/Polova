@@ -5,6 +5,15 @@ import React, { useEffect, useRef, useState } from "react";
 const Part2 = () => {
   const [isVisible, setIsVisible] = useState(false);
   const part2Ref = useRef(null);
+  const [isMenuOpen1, setIsMenuOpen1] = useState(false);
+  const [isMenuOpen2, setIsMenuOpen2] = useState(false);
+
+  const toggleMenu1 = () => {
+    setIsMenuOpen1(!isMenuOpen1);
+  };
+  const toggleMenu2 = () => {
+    setIsMenuOpen2(!isMenuOpen2);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,32 +46,56 @@ const Part2 = () => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="w-full h-screen bg-green-800">
-        <h1 className="text-6xl font-bold w-full flex justify-center">Mapa</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque
-          ipsum. Vestibulum fermentum tortor id mi. Mauris dictum facilisis
-          augue. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Integer pellentesque quam vel velit. Etiam commodo dui
-          eget wisi. Mauris elementum mauris vitae tortor. Pellentesque pretium
-          lectus id turpis. Nullam faucibus mi quis velit. Temporibus autem
-          quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-          eveniet ut et voluptates repudiandae sint et molestiae non recusandae.
-          Donec iaculis gravida nulla. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum. Duis condimentum augue id magna semper rutrum. Etiam quis
-          quam. Mauris tincidunt sem sed arcu. Etiam ligula pede, sagittis quis,
-          interdum ultricies, scelerisque eu. Aliquam erat volutpat. In sem
-          justo, commodo ut, suscipit at, pharetra vitae, orci. Curabitur
-          bibendum justo non orci. Sed elit dui, pellentesque a, faucibus vel,
-          interdum nec, diam. Nullam eget nisl. Praesent vitae arcu tempor neque
-          lacinia pretium. Duis viverra diam non justo. Cras elementum. Itaque
-          earum rerum hic tenetur a sapiente delectus, ut aut reiciendis
-          voluptatibus maiores alias consequatur aut perferendis doloribus
-          asperiores repellat.
-        </p>
+      <div className="w-full h-auto bg-slate-500">
+        <h1 className="text-6xl font-bold w-auto flex justify-center">
+          Překladatelství
+        </h1>
+        <div className="h-px bg-white w-1/2 absolute  right-1/4 "></div>
+        <div className="flex justify-center w-screen pt-10">
+          <button
+            onClick={toggleMenu1}
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+          >
+            {isMenuOpen1 ? "-" : "+"}
+          </button>
+          {isMenuOpen1 && (
+            <p className="flex justify-center content-center w-1/2 font-serif text-xl">
+              Překladům textů z českého do polského jazyka, a naopak, se věnuji
+              od roku 1999. Jako rodilý mluvčí polského jazyka, který absolvoval
+              vysokoškolská studia v České republice, se od té doby neustále
+              pohybuji v oboujazyčném prostředí. Překládal jsem snad již všechny
+              druhy textů, jako např.:
+            </p>
+          )}
+          <button
+            onClick={toggleMenu2}
+            className="bg-blue-500 text-white px-4 py-2 rounded"
+          >
+            {isMenuOpen1 ? "Hide List" : "Show List"}
+          </button>
+          {isMenuOpen2 && (
+            <ul>
+              <li>- osobní korespondenci</li>
+              <li>- návody k obsluze různých zařízení</li>
+              <li>- projektovou a výrobní dokumentaci </li>
+              <li>- obchodní smlouvy</li>
+              <li>- obchodní korespondenci</li>
+              <li>- resumé akademických práci</li>
+              <li>- diplomové práce </li>
+              <li>- veřejné listiny (bez razítka soudního překladatele)</li>
+              <li>- webové stránky</li>
+              <li>- e-shopy</li>
+              <li>- cestovní materiály</li>
+              <li>- učebnice a pracovní listy</li>
+              <li>- dokumentaci projektů a grantů z fondů EU</li>
+              <li>- zdravotnickou dokumentaci</li>
+              <li>- materiály týkající se lázeňské péče </li>
+              <li>- propagační materiály </li>
+              <li>- texty pro časopisy</li>
+              <li>- a mnoho jiných</li>
+            </ul>
+          )}
+        </div>
       </div>
     </div>
   );
