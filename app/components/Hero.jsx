@@ -44,9 +44,9 @@ const Hero = () => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+      <div className="absolute inset-0 bg-black dark:bg-gray-900 opacity-20 z-10"></div>
       <div className="relative grid grid-cols-2 w-full h-full z-20">
-        <div className="bg-white flex items-center justify-center font-bold text-black z-30">
+        <div className="bg-white dark:bg-gray-800 flex items-center justify-center font-bold text-black dark:text-white z-30">
           <div
             className={`hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-black transform transition-transform duration-1000 text-center ${
               isVisible ? "translate-y-0" : "-translate-y-10"
@@ -56,7 +56,7 @@ const Hero = () => {
             Důvěrné Ucho
           </div>
         </div>
-        <div className="bg-czech-red flex items-center justify-center font-bold text-black z-30">
+        <div className="bg-czech-red flex items-center justify-center font-bold text-black dark:text-white z-30">
           <div
             className={`hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
@@ -66,7 +66,7 @@ const Hero = () => {
             Překlad
           </div>
         </div>
-        <div className="bg-polish-red flex items-center justify-center font-bold text-black z-30">
+        <div className="bg-polish-red flex items-center justify-center font-bold text-black dark:text-white z-30">
           <div
             className={`hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
@@ -76,7 +76,7 @@ const Hero = () => {
             Tlumočení
           </div>
         </div>
-        <div className="bg-czech-blue flex items-center justify-center font-bold text-black z-30">
+        <div className="bg-czech-blue flex items-center justify-center font-bold text-black dark:text-white z-30">
           <div
             className={`hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
               isVisible ? "translate-y-0" : "-translate-y-10"

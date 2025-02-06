@@ -112,7 +112,7 @@ const Part2 = () => {
             onClick={toggleMenu1}
             className="flex justify-between w-full p-6 text-white dark:text-gray-200"
           >
-            <div className="text-3xl">Co bys měl o mně vědět</div>
+            <div className="text-3xl">Co bys měl o mn ě vědět</div>
             {isMenuOpen1 ? "-" : "+"}
           </button>
           <div
