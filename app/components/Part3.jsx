@@ -111,7 +111,7 @@ const Part3 = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="absolute inset-0 h-full w-full rounded-xl bg-white px-12 text-center text-black [backface-visibility:hidden] [transform:rotateY(180deg)] flex items-center justify-center">
+                    <div className="absolute inset-0 h-full w-full rounded-xl bg-white dark:bg-white px-12 text-center text-black dark:text-black [backface-visibility:hidden] [transform:rotateY(180deg)] flex items-center justify-center">
                       <div className="font-serif text-2xl max-h-full overflow-y-auto p-4">
                         <span>{backTexts[index]}</span>
                       </div>

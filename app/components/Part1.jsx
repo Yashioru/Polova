@@ -37,7 +37,7 @@ const Part1 = () => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="w-auto h-auto bg-black">
+      <div className="w-auto h-auto bg-black dark:bg-black">
         <h1
           className={`text-6xl font-bold w-auto flex justify-center pt-20 transform transition-transform duration-1000 ${
             isVisible ? "translate-y-0" : "-translate-y-10"
@@ -60,7 +60,7 @@ const Part1 = () => {
           </p>
         </div>
         <div className="w-auto flex justify-end">
-          <div className="w-full sm:w-1/3 mr-0 sm:mr-[20%] mt-20 flex-col font-serif text-xl">
+          <div className="w-full sm:w-1/3 mr-0 sm:mr-[20%] mt-20 flex-col font-serif text-xl text-white dark:text-gray-200">
             <h1 className="flex justify-center font-bold text-2xl font-serif">
               Vzdělání!
             </h1>
@@ -73,7 +73,7 @@ const Part1 = () => {
             postgraduální studium jsem absolvovat na Opolské univerzitě.{" "}
           </div>
         </div>
-        <div className="flex flex-col w-full sm:w-1/3 ml-0 sm:ml-[20%] mt-20 font-serif text-xl">
+        <div className="flex flex-col w-full sm:w-1/3 ml-0 sm:ml-[20%] mt-20 font-serif text-xl text-white dark:text-gray-200">
           <h1 className="flex justify-center font-bold text-2xl font-serif">
             Věrit!
           </h1>
@@ -85,7 +85,7 @@ const Part1 = () => {
           však s ohledem na well-being.
         </div>
         <div className="w-auto flex justify-end">
-          <div className="w-full sm:w-1/3 mr-0 sm:mr-[20%] mt-20 flex-col font-serif text-xl pb-20">
+          <div className="w-full sm:w-1/3 mr-0 sm:mr-[20%] mt-20 flex-col font-serif text-xl text-white dark:text-gray-200 pb-20">
             <h1 className="flex justify-center font-bold text-2xl font-serif">
               Nebát se!
             </h1>
