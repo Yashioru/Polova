@@ -48,7 +48,7 @@ const Hero = () => {
       <div className="relative grid grid-cols-2 w-full h-full z-20">
         <div className="bg-white flex items-center justify-center font-bold text-black z-30">
           <div
-            className={`hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-black transform transition-transform duration-1000 ${
+            className={`hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-black transform transition-transform duration-1000 text-center ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}
             onClick={() => scrollToSection("part1")}
