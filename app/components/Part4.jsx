@@ -37,8 +37,12 @@ const Part4 = () => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="w-auto h-auto bg-blue-800">
-        <h1 className="text-6xl font-bold w-auto flex justify-center">
+      <div className="w-auto h-auto bg-black">
+        <h1
+          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 ${
+            isVisible ? "translate-y-0" : "-translate-y-full"
+          }`}
+        >
           Kontakt
         </h1>
         <p>Yo</p>

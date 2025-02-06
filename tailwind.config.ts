@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "czech-blue": "#11457e",
+        "czech-red": "#d7141a",
+        "polish-red": "#dc143c",
       },
     },
   },

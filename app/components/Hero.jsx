@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Part1 from "./Part1";
 import Part2 from "./Part2";
 import Part3 from "./Part3";
@@ -11,43 +11,79 @@ const scrollToSection = (sectionId) => {
 };
 
 const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+
+    return () => {
+      if (heroRef.current) {
+        observer.unobserve(heroRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div>
-      <div className="w-full h-screen bg-gray-800 flex items-center justify-center">
-        <div>
-          <div className="grid grid-cols-2 top-0 left-0 right-0 bottom-0 absolute">
-            <div className=" bg-white flex items-center justify-center font-bold text-black">
-              <div
-                className="hover:cursor-pointer"
-                onClick={() => scrollToSection("part1")}
-              >
-                Informace
-              </div>
-            </div>
-            <div className=" bg-blue-600 flex items-center justify-center font-bold text-black">
-              <div
-                className="hover:cursor-pointer"
-                onClick={() => scrollToSection("part2")}
-              >
-                MAPA
-              </div>
-            </div>
-            <div className=" bg-red-600 flex items-center justify-center font-bold text-black">
-              <div
-                className="hover:cursor-pointer"
-                onClick={() => scrollToSection("part3")}
-              >
-                IDK
-              </div>
-            </div>
-            <div className=" bg-white flex items-center justify-center font-bold text-black">
-              <div
-                className="hover:cursor-pointer"
-                onClick={() => scrollToSection("part4")}
-              >
-                KONTAKT
-              </div>
-            </div>
+    <div
+      ref={heroRef}
+      className={`relative w-full h-screen bg-gray-800 flex items-center justify-center transition-opacity duration-1000 ${
+        isVisible ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      <div className="absolute inset-0 bg-black opacity-20 z-10"></div>
+      <div className="relative grid grid-cols-2 w-full h-full z-20">
+        <div className="bg-white flex items-center justify-center font-bold text-black z-30">
+          <div
+            className={`hover:cursor-pointer font-serif font-bold text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-black transform transition-transform duration-1000 ${
+              isVisible ? "translate-y-0" : "-translate-y-10"
+            }`}
+            onClick={() => scrollToSection("part1")}
+          >
+            Důvěrné Ucho
+          </div>
+        </div>
+        <div className="bg-czech-red flex items-center justify-center font-bold text-black z-30">
+          <div
+            className={`hover:cursor-pointer font-serif font-bold text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
+              isVisible ? "translate-y-0" : "-translate-y-10"
+            }`}
+            onClick={() => scrollToSection("part2")}
+          >
+            Překlad
+          </div>
+        </div>
+        <div className="bg-polish-red flex items-center justify-center font-bold text-black z-30">
+          <div
+            className={`hover:cursor-pointer font-serif font-bold text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
+              isVisible ? "translate-y-0" : "-translate-y-10"
+            }`}
+            onClick={() => scrollToSection("part3")}
+          >
+            Tlumočení
+          </div>
+        </div>
+        <div className="bg-czech-blue flex items-center justify-center font-bold text-black z-30">
+          <div
+            className={`hover:cursor-pointer font-serif font-bold text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
+              isVisible ? "translate-y-0" : "-translate-y-10"
+            }`}
+            onClick={() => scrollToSection("part4")}
+          >
+            Kontakt
           </div>
         </div>
       </div>
