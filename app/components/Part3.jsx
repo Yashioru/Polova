@@ -9,7 +9,7 @@ const Part3 = () => {
   const [hasMounted, setHasMounted] = useState(false);
 
   const backTexts = [
-    "Jsem Polák, který už přes 20 let žije a pohybuje se na česko-polském pomezí. Vzhledem k různým kontaktům a životním situacím neustále přepínám mezi českým a polským jazykem. Tak vypadá můj běžný den.",
+    "Jsem Polák, který už přes 20 let žije a pohybuje se na česko-polském pomezí. Vzhledem k různým kontaktům a životním situacím neustále přepínám mezi českým a polským jazykem. Tak vypadá můj běžný den. Zde byla jeho císařská milost Císař Jakub I.",
     <>
       Nabízím tedy službu konsekutivního tlumočníka obou naších blízkých a
       zároveň dosti odlišných jazyků především v těchto nebo podobných
