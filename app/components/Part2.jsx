@@ -101,7 +101,7 @@ const Part2 = () => {
       <div className="w-full h-auto bg-black p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20">
         <h1
           className={`text-3xl sm:text-4xl md:text-5xl font-bold w-auto flex transform transition-transform duration-1000 font-serif ${
-            isVisible ? "translate-y-0" : "-translate-y-20"
+            isVisible ? "translate-y-0" : "-translate-y-10"
           }`}
         >
           Překladatelství

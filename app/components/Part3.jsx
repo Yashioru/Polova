@@ -79,7 +79,7 @@ const Part3 = () => {
     >
       <div className="w-auto h-auto bg-black pt-20">
         <h1
-          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 ${
+          className={`text-6xl md:text-5xl sm:text-4xl font-bold w-auto flex justify-center transform transition-transform duration-1000 ${
             isVisible ? "translate-y-0" : "-translate-y-full"
           }`}
         >
@@ -106,13 +106,13 @@ const Part3 = () => {
                           alt={`Frontside of ${word}`}
                           className="h-full w-full rounded-xl object-cover"
                         />
-                        <span className="text-4xl absolute text-black">
+                        <span className="text-4xl md:text-3xl sm:text-2xl absolute text-black">
                           {word}
                         </span>
                       </div>
                     </div>
                     <div className="absolute inset-0 h-full w-full rounded-xl bg-white px-12 text-center text-black [backface-visibility:hidden] [transform:rotateY(180deg)] flex items-center justify-center">
-                      <div className="font-serif text-2xl">
+                      <div className="font-serif text-2xl md:text-xl sm:text-lg">
                         <span>{backTexts[index]}</span>
                       </div>
                     </div>
