@@ -35,13 +35,15 @@ const Part4 = () => {
       ref={part1Ref}
       className={`transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      <div className="w-full h-screen bg-blue-800">
-        <h1 className="text-6xl font-bold w-full flex justify-center">
+      }`}>
+      <div className="w-auto h-auto bg-black dark:bg-black pt-12 pb-12">
+        <h1
+          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 ${
+            isVisible ? "translate-y-0" : "-translate-y-full"
+          }`}>
           Kontakt
         </h1>
-        <p>Yo</p>
+        <p className="text-white dark:text-gray-200">Yo</p>
       </div>
     </div>
   );
