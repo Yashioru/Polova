@@ -38,12 +38,12 @@ const Part4 = () => {
       }`}>
       <div className="w-auto h-auto bg-black dark:bg-black pt-12 pb-12">
         <h1
-          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 ${
+          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 text-white dark:text-white ${
             isVisible ? "translate-y-0" : "-translate-y-full"
           }`}>
           Kontakt
         </h1>
-        <p className="text-white dark:text-gray-200">Yo</p>
+        <p className="text-white dark:text-white">Yo</p>
       </div>
     </div>
   );

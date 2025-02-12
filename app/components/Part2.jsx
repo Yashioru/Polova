@@ -99,7 +99,7 @@ const Part2 = () => {
       }`}>
       <div className="w-full h-auto bg-black dark:bg-black p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 pt-12 pb-12">
         <h1
-          className={`text-3xl sm:text-4xl md:text-5xl font-bold w-auto flex transform transition-transform duration-1000 font-serif ${
+          className={`text-3xl sm:text-4xl md:text-5xl font-bold w-auto flex transform transition-transform duration-1000 font-serif text-white dark:text-white ${
             isVisible ? "translate-y-0" : "-translate-y-10"
           }`}>
           Překladatelství
@@ -108,12 +108,12 @@ const Part2 = () => {
           <div className="h-px bg-white w-full mb-4"></div>
           <button
             onClick={toggleMenu1}
-            className="flex justify-between w-full p-6 text-white dark:text-gray-200">
+            className="flex justify-between w-full p-6 text-white dark:text-white">
             <div className="text-3xl">Co bys měl o mně vědět</div>
             {isMenuOpen1 ? "-" : "+"}
           </button>
           <div
-            className={`font-serif text-2xl mt-4 transition-all duration-1000 overflow-hidden text-white dark:text-gray-200 ${
+            className={`font-serif text-2xl mt-4 transition-all duration-1000 overflow-hidden text-white dark:text-white ${
               isMenuOpen1 ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
             }`}>
             <div
@@ -133,12 +133,12 @@ const Part2 = () => {
           <div className="h-px bg-white w-full mb-4 mt-4"></div>
           <button
             onClick={toggleMenu2}
-            className="flex justify-between w-full p-6 text-white dark:text-gray-200 mt-8">
+            className="flex justify-between w-full p-6 text-white dark:text-white mt-8">
             <div className="text-3xl">Co vše dokážu přeložit</div>
             {isMenuOpen2 ? "-" : "+"}
           </button>
           <div
-            className={`font-serif text-2xl mt-4 transition-all duration-1000 overflow-hidden text-white dark:text-gray-200 ${
+            className={`font-serif text-2xl mt-4 transition-all duration-1000 overflow-hidden text-white dark:text-white ${
               isMenuOpen2 ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
             }`}>
             <div
@@ -172,12 +172,12 @@ const Part2 = () => {
           <div className="h-px bg-white w-full mb-4 mt-4"></div>
           <button
             onClick={toggleMenu3}
-            className="flex justify-between w-full p-6 text-white dark:text-gray-200 mt-8">
+            className="flex justify-between w-full p-6 text-white dark:text-white mt-8">
             <div className="text-3xl">Moje služby</div>
             {isMenuOpen3 ? "-" : "+"}
           </button>
           <div
-            className={`font-serif text-2xl mt-4 transition-all duration-1000 overflow-hidden text-white dark:text-gray-200 ${
+            className={`font-serif text-2xl mt-4 transition-all duration-1000 overflow-hidden text-white dark:text-white ${
               isMenuOpen3 ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
             }`}>
             <div
@@ -212,12 +212,12 @@ const Part2 = () => {
           <div className="h-px bg-white w-full mb-4 mt-4"></div>
           <button
             onClick={toggleMenu4}
-            className="flex justify-between w-full p-6 text-white dark:text-gray-200 mt-8">
+            className="flex justify-between w-full p-6 text-white dark:text-white mt-8">
             <div className="text-3xl">Slovníček</div>
             {isMenuOpen4 ? "-" : "+"}
           </button>
           <div
-            className={`w-full font-serif text-2xl mt-4 transition-all duration-1000 overflow-hidden text-white dark:text-gray-200 ${
+            className={`w-full font-serif text-2xl mt-4 transition-all duration-1000 overflow-hidden text-white dark:text-white ${
               isMenuOpen4 ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
             }`}>
             <div

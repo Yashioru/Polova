@@ -78,7 +78,7 @@ const Part3 = () => {
       }`}>
       <div className="w-auto h-auto bg-black pt-20 pb-12">
         <h1
-          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 ${
+          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 text-white dark:text-white ${
             isVisible ? "translate-y-0" : "-translate-y-full"
           }`}>
           Tlumočení
