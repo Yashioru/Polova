@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Part1 from "./Part1";
 import Part2 from "./Part2";
 import Part3 from "./Part3";
@@ -14,7 +14,7 @@ const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const heroRef = useRef(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -49,37 +49,37 @@ const Hero = () => {
         backgroundPosition: "center",
       }}>
       <div className="absolute inset-0 bg-black dark:bg-gray-900 opacity-20 z-10"></div>
-      <div className="relative w-full h-full z-20">
-        <div className="absolute top-[20%] left-[4%] md:top-[20%] md:left-[12%] flex items-center justify-center font-bold text-black dark:text-black z-30">
+      <div className="relative grid grid-cols-2 w-full h-full z-20">
+        <div className=" flex items-center justify-center font-bold text-black dark:text-black z-30">
           <div
-            className={`hover:cursor-pointer font-serif font-bold text-2xl md:text-3xl lg:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-black dark:text-black transform transition-transform duration-1000 text-center ${
+            className={`hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-black dark:text-black transform transition-transform duration-1000 text-center ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}
             onClick={() => scrollToSection("part1")}>
             Důvěrné Ucho
           </div>
         </div>
-        <div className="absolute top-[30%] right-[10%] md:top-[30%] md:right-[17.5%] flex items-center justify-center font-bold text-black dark:text-white z-30">
+        <div className=" flex items-center justify-center font-bold text-black dark:text-white z-30">
           <div
-            className={`hover:cursor-pointer font-serif font-bold text-2xl md:text-3xl lg:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
+            className={`top-1/3 ml-3 absolute hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}
             onClick={() => scrollToSection("part2")}>
             Překlad
           </div>
         </div>
-        <div className="absolute bottom-[25%] left-[9%] md:bottom-[24%] md:left-[16%] flex items-center justify-center font-bold text-black dark:text-white z-30">
+        <div className=" flex items-center justify-center font-bold text-black dark:text-white z-30">
           <div
-            className={`hover:cursor-pointer font-serif font-bold text-2xl md:text-3xl lg:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
+            className={`hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}
             onClick={() => scrollToSection("part3")}>
             Tlumočení
           </div>
         </div>
-        <div className="absolute bottom-[15%] right-[10%] md:bottom-[12%] md:right-[17%] flex items-center justify-center font-bold text-black dark:text-white z-30">
+        <div className=" flex items-center justify-center font-bold text-black dark:text-white z-30">
           <div
-            className={`hover:cursor-pointer font-serif font-bold text-2xl md:text-3xl lg:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
+            className={`absolute bottom-[12%] ml-3 hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}
             onClick={() => scrollToSection("part4")}>
