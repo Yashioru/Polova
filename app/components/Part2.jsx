@@ -99,7 +99,7 @@ const Part2 = () => {
       }`}>
       <div className="w-full h-auto bg-black dark:bg-black p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 pt-12 pb-12">
         <h1
-          className={`text-3xl sm:text-4xl md:text-5xl font-bold w-auto flex transform transition-transform duration-1000 font-serif text-white dark:text-white ${
+          className={`text-6xl justify-center font-bold w-auto flex transform transition-transform duration-1000 font-serif text-white dark:text-white ${
             isVisible ? "translate-y-0" : "-translate-y-10"
           }`}>
           Překladatelství
