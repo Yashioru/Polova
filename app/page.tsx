@@ -7,6 +7,9 @@ import Part4 from "./components/Part4";
 export default function Home() {
   return (
     <div>
+      <div className="w-full h-[8vw] bg-white "></div>
+      <div className="w-full h-[0.35vw] bg-black "></div>
+
       <div>
         <Hero />
         <Part1 />
