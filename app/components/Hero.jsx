@@ -50,18 +50,18 @@ const Hero = () => {
       }}>
       <div className="absolute inset-0 bg-black dark:bg-gray-900 opacity-20 z-10"></div>
       <div className="relative grid grid-cols-2 w-full h-full z-20">
-        <div className=" flex items-center justify-center font-bold text-black dark:text-black z-30">
+        <div className=" flex items-center justify-center font-bold text-white dark:text-white z-30">
           <div
-            className={`hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-black dark:text-black transform transition-transform duration-1000 text-center ${
+            className={`hover:cursor-pointer font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white dark:text-white transform transition-transform duration-1000 text-center ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}
             onClick={() => scrollToSection("part1")}>
             Důvěrné Ucho
           </div>
         </div>
-        <div className=" flex items-center justify-center font-bold text-black dark:text-white z-30">
+        <div className=" flex items-center justify-center font-bold text-white dark:text-white z-30">
           <div
-            className={`top-1/3 ml-3 absolute hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
+            className={`top-1/3 ml-3 absolute hover:cursor-pointer font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}
             onClick={() => scrollToSection("part2")}>
@@ -70,7 +70,7 @@ const Hero = () => {
         </div>
         <div className=" flex items-center justify-center font-bold text-black dark:text-white z-30">
           <div
-            className={`hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
+            className={`hover:cursor-pointer font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}
             onClick={() => scrollToSection("part3")}>
@@ -79,7 +79,7 @@ const Hero = () => {
         </div>
         <div className=" flex items-center justify-center font-bold text-black dark:text-white z-30">
           <div
-            className={`absolute bottom-[12%] ml-3 hover:cursor-pointer font-serif font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
+            className={`absolute bottom-[12%] ml-3 hover:cursor-pointer font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}
             onClick={() => scrollToSection("part4")}>

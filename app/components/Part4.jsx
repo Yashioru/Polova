@@ -35,10 +35,16 @@ const Part4 = () => {
       ref={part1Ref}
       className={`transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
-      }`}>
-      <div className="w-auto h-auto bg-black dark:bg-black pt-12 pb-12">
+      }`}
+      style={{
+        backgroundImage: 'url("/images/ns.png")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}>
+      <div className="w-auto h-auto pt-12 pb-12">
         <h1
-          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 text-white dark:text-white ${
+          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 text-black dark:text-black font-['League_Spartan'] ${
             isVisible ? "translate-y-0" : "-translate-y-full"
           }`}>
           Kontakt

@@ -7,8 +7,8 @@ import Part4 from "./components/Part4";
 export default function Home() {
   return (
     <div>
-      <div className="w-full h-[8vw] bg-white flex items-center justify-center">
-        <img src="/images/picodrat.png" alt="Logo" className="h-full" />
+      <div className="w-full h-[4vw] bg-white flex items-center justify-center">
+        <img src="/images/picodrat.png" alt="Logo" className="h-1/2" />
       </div>
       <div className="w-full h-[0.35vw] bg-black"></div>
       <div>
