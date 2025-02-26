@@ -50,13 +50,22 @@ const Hero = () => {
       }}>
       <div className="absolute inset-0 bg-black dark:bg-gray-900 opacity-20 z-10"></div>
       <div className="relative grid grid-cols-2 w-full h-full z-20">
+        <div className="absolute bg-white w-60 h-60 flex top-[19.5vw] left-[42.5vw] border rounded-full">
+          <div className="relative top-20">
+            <img
+              src="/images/picodrat.png"
+              alt="Logo"
+              className="relative z-50 w-40 top-3 left-10"
+            />
+          </div>
+        </div>
         <div className=" flex items-center justify-center font-bold text-white dark:text-white z-30">
           <div
             className={`hover:cursor-pointer font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white dark:text-white transform transition-transform duration-1000 text-center ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}
-            onClick={() => scrollToSection("part1")}>
-            Důvěrné Ucho
+            onClick={() => scrollToSection("part3")}>
+            Tlumočení
           </div>
         </div>
         <div className=" flex items-center justify-center font-bold text-white dark:text-white z-30">
@@ -73,8 +82,8 @@ const Hero = () => {
             className={`hover:cursor-pointer font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}
-            onClick={() => scrollToSection("part3")}>
-            Tlumočení
+            onClick={() => scrollToSection("part1")}>
+            Důvěrné Ucho
           </div>
         </div>
         <div className=" flex items-center justify-center font-bold text-black dark:text-white z-30">
