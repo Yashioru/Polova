@@ -78,12 +78,14 @@ const Part3 = () => {
       }`}
       style={{
         backgroundColor: "black",
-      }}>
+      }}
+    >
       <div className="w-auto h-auto  pt-20 pb-12">
         <h1
           className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 text-white dark:text-white font-['League_Spartan'] ${
             isVisible ? "translate-y-0" : "-translate-y-full"
-          }`}>
+          }`}
+        >
           Tlumočení
         </h1>
         <div className="flex min-h-screen flex-col justify-center  h-auto">
@@ -93,11 +95,13 @@ const Part3 = () => {
                 <div
                   key={index}
                   className="group h-[560px] w-[450px] [perspective:1000px] m-4"
-                  onClick={() => handleFlip(index)}>
+                  onClick={() => handleFlip(index)}
+                >
                   <div
                     className={`relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] ${
                       flipped[index] ? "[transform:rotateY(180deg)]" : ""
-                    }`}>
+                    }`}
+                  >
                     <div className="absolute inset-0">
                       <div className="bg-white h-full w-full rounded-xl object-cover shadow-xl shadow-white/40 flex items-center justify-center">
                         <img

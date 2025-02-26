@@ -38,12 +38,14 @@ const Part4 = () => {
       }`}
       style={{
         backgroundColor: "black",
-      }}>
+      }}
+    >
       <div className="w-auto h-auto pt-12 pb-12">
         <h1
           className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 text-white dark:text-white font-['League_Spartan'] ${
             isVisible ? "translate-y-0" : "-translate-y-full"
-          }`}>
+          }`}
+        >
           Kontakt
         </h1>
         <p className="text-white dark:text-white">Yo</p>
