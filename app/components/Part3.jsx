@@ -9,7 +9,7 @@ const Part3 = () => {
   const [hasMounted, setHasMounted] = useState(false);
 
   const backTexts = [
-    "Jsem Polák, který už přes 20 let žije a pohybuje se na česko-polském pomezí. Vzhledem k různým kontaktům a životním situacím neustále přepínám mezi českým a polským jazykem. Tak vypadá můj běžný den. Zde byla jeho císařská milost Císař Jakub I.",
+    "Jsem Polák, který už přes 20 let žije a pohybuje se na česko-polském pomezí. Vzhledem k různým kontaktům a životním situacím neustále přepínám mezi českým a polským jazykem. Tak vypadá můj běžný den. Zde byla jeho císařská milost Císař Jakub I. AV",
     <>
       Nabízím tedy službu konsekutivního tlumočníka obou naších blízkých a
       zároveň dosti odlišných jazyků především v těchto nebo podobných
@@ -76,29 +76,28 @@ const Part3 = () => {
       className={`transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
-    >
-      <div className="w-auto h-auto bg-black pt-20 pb-12">
+      style={{
+        backgroundColor: "black",
+      }}>
+      <div className="w-auto h-auto  pt-20 pb-12">
         <h1
-          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 ${
+          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 text-white dark:text-white font-['League_Spartan'] ${
             isVisible ? "translate-y-0" : "-translate-y-full"
-          }`}
-        >
+          }`}>
           Tlumočení
         </h1>
-        <div className="flex min-h-screen flex-col justify-center bg-black h-auto">
+        <div className="flex min-h-screen flex-col justify-center  h-auto">
           <div className="flex flex-wrap justify-center font-serif">
             {["O mně", "Nabídka", "Chyby", "Typ", "Peníze", "Služby"].map(
               (word, index) => (
                 <div
                   key={index}
                   className="group h-[560px] w-[450px] [perspective:1000px] m-4"
-                  onClick={() => handleFlip(index)}
-                >
+                  onClick={() => handleFlip(index)}>
                   <div
                     className={`relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] ${
                       flipped[index] ? "[transform:rotateY(180deg)]" : ""
-                    }`}
-                  >
+                    }`}>
                     <div className="absolute inset-0">
                       <div className="bg-white h-full w-full rounded-xl object-cover shadow-xl shadow-white/40 flex items-center justify-center">
                         <img
@@ -106,13 +105,13 @@ const Part3 = () => {
                           alt={`Frontside of ${word}`}
                           className="h-full w-full rounded-xl object-cover"
                         />
-                        <span className="text-4xl absolute text-black">
+                        <span className="text-4xl absolute text-black font-['League_Spartan']">
                           {word}
                         </span>
                       </div>
                     </div>
                     <div className="absolute inset-0 h-full w-full rounded-xl bg-white dark:bg-white px-12 text-center text-black dark:text-black [backface-visibility:hidden] [transform:rotateY(180deg)] flex items-center justify-center">
-                      <div className="font-serif text-2xl max-h-full overflow-y-auto p-4">
+                      <div className="text-2xl max-h-full overflow-y-auto p-4 font-['League_Spartan']">
                         <span>{backTexts[index]}</span>
                       </div>
                     </div>

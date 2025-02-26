@@ -36,20 +36,21 @@ const Part1 = () => {
       className={`transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
-    >
-      <div className="w-auto h-auto bg-black dark:bg-black pt-12 pb-12">
+      style={{
+        backgroundColor: "black",
+      }}>
+      <div className="w-auto h-auto pt-12 pb-12">
         <h1
-          className={`text-6xl font-bold w-auto flex justify-center pt-20 transform transition-transform duration-1000 ${
+          className={`text-6xl font-bold w-auto flex justify-center pt-20 transform transition-transform duration-1000 text-white dark:text-white font-league-spartan ${
             isVisible ? "translate-y-0" : "-translate-y-10"
-          }`}
-        >
+          }`}>
           Důvěrné Ucho
         </h1>
-        <div className="flex flex-col w-full sm:w-1/3 ml-0 sm:ml-[20%] mt-20 font-serif text-4xl text-white dark:text-gray-200">
-          <h1 className="flex justify-center font-bold text-2xl font-serif">
+        <div className="flex flex-col w-full sm:w-1/3 ml-0 sm:ml-[20%] mt-20 font-['League_Spartan'] text-4xl text-white dark:text-white">
+          <h1 className="flex justify-center font-bold text-2xl font-['League_Spartan']">
             Pomoc!
           </h1>
-          <p className="font-serif text-2xl">
+          <p className="font-league-spartan text-2xl">
             Přicházejí někdy chvíle, kdy se potřebujeme zastavit, reflektovat,
             prostě říct někomu co se v nás děje a tím si také ujasnit spoustu
             věci. Chceme slyšet názor někoho jiného, neangažovaného abychom sami
@@ -60,8 +61,8 @@ const Part1 = () => {
           </p>
         </div>
         <div className="w-auto flex justify-end">
-          <div className="w-full sm:w-1/3 mr-0 sm:mr-[20%] mt-20 flex-col font-serif text-2xl text-white dark:text-gray-200">
-            <h1 className="flex justify-center font-bold text-2xl font-serif">
+          <div className="w-full sm:w-1/3 mr-0 sm:mr-[20%] mt-20 flex-col font-league-spartan text-2xl text-white dark:text-white">
+            <h1 className="flex justify-center font-bold text-2xl font-league-spartan">
               Vzdělání!
             </h1>
             Přes dvacet let doprovázel jsem spousty lidi v jejích velice různých
@@ -73,8 +74,8 @@ const Part1 = () => {
             postgraduální studium jsem absolvovat na Opolské univerzitě.{" "}
           </div>
         </div>
-        <div className="flex flex-col w-full sm:w-1/3 ml-0 sm:ml-[20%] mt-20 font-serif text-2xl text-white dark:text-gray-200">
-          <h1 className="flex justify-center font-bold text-2xl font-serif">
+        <div className="flex flex-col w-full sm:w-1/3 ml-0 sm:ml-[20%] mt-20 font-league-spartan text-2xl text-white dark:text-white">
+          <h1 className="flex justify-center font-bold text-2xl font-league-spartan">
             Věrit!
           </h1>
           Stále jsou mi ale blízké judeo-křesťanské hodnoty a řecko-římský
@@ -85,8 +86,8 @@ const Part1 = () => {
           však s ohledem na well-being.
         </div>
         <div className="w-auto flex justify-end">
-          <div className="w-full sm:w-1/3 mr-0 sm:mr-[20%] mt-20 flex-col font-serif text-2xl text-white dark:text-gray-200 pb-20">
-            <h1 className="flex justify-center font-bold text-2xl font-serif">
+          <div className="w-full sm:w-1/3 mr-0 sm:mr-[20%] mt-20 flex-col font-league-spartan text-2xl text-white dark:text-white pb-20">
+            <h1 className="flex justify-center font-bold text-2xl font-league-spartan">
               Nebát se!
             </h1>
             Pokud cítíte, vnímáte, že o takové „důvěrné ucho“ stojíte, neváhejte

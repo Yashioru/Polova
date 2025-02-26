@@ -7,13 +7,13 @@ import Part4 from "./components/Part4";
 export default function Home() {
   return (
     <div>
-      <div>
-        <Hero />
-        <Part1 />
-        <Part2 />
-        <Part3 />
-        <Part4 />
-      </div>
+      <div className="relative flex justify-center"></div>
+      <Hero />
+      <Part3 />
+      <Part1 />
+      <Part2 />
+
+      <Part4 />
     </div>
   );
 }
