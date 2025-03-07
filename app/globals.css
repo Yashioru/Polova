@@ -7,6 +7,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --polish-red: #dc143c; /* Polish red */
+  --czech-red: #d7141a; /* Czech red */
+  --czech-blue: #11457e; /* Czech blue */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,6 +21,26 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(
+    to right,
+    white,
+    var(--polish-red),
+    var(--czech-red),
+    var(--czech-blue)
+  ); /* Apply gradient background */
   font-family: "League Spartan", Arial, Helvetica, sans-serif;
+  position: relative; /* Ensure the black overlay is positioned correctly */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.1; /* 10% opacity */
+  pointer-events: none; /* Ensure the overlay does not interfere with interactions */
+  z-index: -1; /* Ensure the overlay is behind other content */
 }

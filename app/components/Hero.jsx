@@ -47,28 +47,16 @@ const Hero = () => {
         backgroundImage: 'url("/images/flag.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
-      }}
-    >
+      }}>
       <div className="absolute inset-0 bg-black dark:bg-gray-900 opacity-20 z-10"></div>
       <div className="relative grid w-full h-full z-20">
-        <div className="absolute bg-white w-60 h-60 flex top-[44%] left-[44.7%] border-4 border-black rounded-full z-40">
-          <div className="relative top-20">
-            <img
-              src="/images/picodrat.png"
-              alt="Logo"
-              className="relative z-50 w-40 top-3 left-10"
-            />
-          </div>
-        </div>
         <div
           className="absolute top-0 left-0 w-[50.75%] h-[43.6%] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
-          onClick={() => scrollToSection("part3")}
-        >
+          onClick={() => scrollToSection("part3")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white dark:text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
-            }`}
-          >
+            }`}>
             Tlumočení
           </div>
           <img
@@ -79,13 +67,11 @@ const Hero = () => {
         </div>
         <div
           className="absolute top-0 right-0 w-[48.8%] h-[69.7%] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
-          onClick={() => scrollToSection("part2")}
-        >
+          onClick={() => scrollToSection("part2")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
-            }`}
-          >
+            }`}>
             Překlad
           </div>
           <img
@@ -96,13 +82,11 @@ const Hero = () => {
         </div>
         <div
           className="absolute bottom-0 left-0 w-[50.8%] h-[55.5%] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
-          onClick={() => scrollToSection("part1")}
-        >
+          onClick={() => scrollToSection("part1")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
-            }`}
-          >
+            }`}>
             Důvěrné Ucho
           </div>
           <img
@@ -113,13 +97,11 @@ const Hero = () => {
         </div>
         <div
           className="absolute bottom-0 right-0 w-[48.7%] h-[29.5%] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
-          onClick={() => scrollToSection("part4")}
-        >
+          onClick={() => scrollToSection("part4")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
-            }`}
-          >
+            }`}>
             Kontakt
           </div>
           <img

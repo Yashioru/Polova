@@ -33,19 +33,20 @@ const Part4 = () => {
     <div
       id="part4"
       ref={part1Ref}
-      className={`transition-opacity duration-1000 ${
+      className={`relative transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
       style={{
-        backgroundColor: "black",
-      }}
-    >
-      <div className="w-auto h-auto pt-12 pb-12">
+        background:
+          "linear-gradient(to right, white, var(--polish-red), var(--czech-red), var(--czech-blue))",
+      }}>
+      <div className="absolute inset-0 bg-black opacity-10"></div>{" "}
+      {/* Add semi-transparent black overlay */}
+      <div className="relative w-auto h-auto pt-12 pb-12">
         <h1
           className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 text-white dark:text-white font-['League_Spartan'] ${
             isVisible ? "translate-y-0" : "-translate-y-full"
-          }`}
-        >
+          }`}>
           Kontakt
         </h1>
         <p className="text-white dark:text-white">Yo</p>
