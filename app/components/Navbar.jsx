@@ -43,7 +43,7 @@ const Navbar = () => {
       style={{
         background:
           "linear-gradient(to right, white, var(--polish-red), var(--czech-red), var(--czech-blue))",
-        borderBottom: "2px solid white",
+        borderBottom: "2px solid black",
       }}>
       <div className="absolute inset-0 bg-black opacity-10"></div>{" "}
       {/* Add semi-transparent black overlay */}
