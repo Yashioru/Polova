@@ -5,36 +5,16 @@ import React, { useEffect, useRef, useState } from "react";
 const Part3 = () => {
   const [isVisible, setIsVisible] = useState(false);
   const part1Ref = useRef(null);
-  const [flipped, setFlipped] = useState(Array(6).fill(false));
-  const [hasMounted, setHasMounted] = useState(false);
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isFading, setIsFading] = useState(false); // New state for fading animation
 
-  const backTexts = [
-    "Jsem Polák, který už přes 20 let žije a pohybuje se na česko-polském pomezí. Vzhledem k různým kontaktům a životním situacím neustále přepínám mezi českým a polským jazykem. Tak vypadá můj běžný den. Zde byla jeho císařská milost Císař Jakub I. AV",
-    <>
-      Nabízím tedy službu konsekutivního tlumočníka obou naších blízkých a
-      zároveň dosti odlišných jazyků především v těchto nebo podobných
-      situacích:
-      <ul className="list-disc list-inside">
-        <li>obchodní jednání,</li>
-        <li>schůze jednatelů, nebo jiných činitelů,</li>
-        <li>vystoupení na konferencích,</li>
-        <li>vystoupení na různých veřejných akcích,</li>
-        <li>potřeba tlumočení v různých životních záležitostech.</li>
-      </ul>
-    </>,
-    "Jejích nedokonalé ovládání může způsobit, že na obchodní jednání, nebo i rande, přijdete s měsíčním zpožděním, když se domluvíte na květen a druhá strana bude skálopevně přesvědčená, že to měl být kwiecień, tedy duben.",
-    "Konsekutivní tlumočení je druh tlumočení, kde po nějakém uceleném fragmentu vystoupení řečníka nebo partnera v jednáních, jej tlumočník opakuje v druhém jazyce. Nejde tedy o tlumočení souběžné se slovy řečníka, kterému se říká simultánní.",
-    "Základní účtovací sazbou je půl pracovního dne, tedy 4 hodiny za 4.000,- Kč.(nejsem plátce DPH) ",
-    "Mým sídlem je Ostrava, nicméně nabízím své služby po celém území ČR a Polska. Náklady na dopravu a příp. ubytování nejsou součásti ceny a jsou účtovány zvlášť. V případě dopravy vlastním autem se účtuje 15,- Kč/km. ",
+  const texts = [
+    "Jsem Polák, který už přes 20 let žije a pohybuje se na česko-polském pomezí. Nabízím tedy službu konsekutivního tlumočníka obou naších blízkých a zároveň dosti odlišných jazyků.Jejích nedokonalé ovládání může způsobit, že na obchodní jednání, nebo i rande, přijdete s měsíčním zpožděním.",
+    "Konsekutivní tlumočení je druh tlumočení, kde po nějakém uceleném fragmentu vystoupení řečníka nebo partnera v jednáních, jej tlumočník opakuje v druhém jazyce.",
+    "Základní účtovací sazbou je půl pracovního dne, tedy 4 hodiny za 4.000,- Kč.Mým sídlem je Ostrava, nicméně nabízím své služby po celém území ČR a Polska.",
   ];
 
   useEffect(() => {
-    setHasMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!hasMounted) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -55,19 +35,25 @@ const Part3 = () => {
         observer.unobserve(part1Ref.current);
       }
     };
-  }, [hasMounted]);
+  }, []);
 
-  const handleFlip = (index) => {
-    setFlipped((prev) => {
-      const newFlipped = [...prev];
-      newFlipped[index] = !newFlipped[index];
-      return newFlipped;
-    });
+  const handleNext = () => {
+    setIsFading(true);
+    setTimeout(() => {
+      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+      setIsFading(false);
+    }, 500); // Duration of the fade-out animation
   };
 
-  if (!hasMounted) {
-    return null;
-  }
+  const handlePrev = () => {
+    setIsFading(true);
+    setTimeout(() => {
+      setCurrentTextIndex(
+        (prevIndex) => (prevIndex - 1 + texts.length) % texts.length
+      );
+      setIsFading(false);
+    }, 500); // Duration of the fade-out animation
+  };
 
   return (
     <div
@@ -80,6 +66,7 @@ const Part3 = () => {
         background:
           "linear-gradient(to right, white, var(--polish-red), var(--czech-red), var(--czech-blue))",
       }}>
+      <div className="absolute top-0 left-0 w-full h-2 bg-gray-800"></div>
       <div className="absolute inset-0 bg-black opacity-10"></div>{" "}
       {/* Add semi-transparent black overlay */}
       <div className="relative w-auto h-auto pt-20 pb-12">
@@ -89,39 +76,27 @@ const Part3 = () => {
           }`}>
           Tlumočení
         </h1>
-        <div className="flex min-h-screen flex-col justify-center  h-auto">
-          <div className="flex flex-wrap justify-center font-serif">
-            {["O mně", "Nabídka", "Chyby", "Typ", "Peníze", "Služby"].map(
-              (word, index) => (
-                <div
-                  key={index}
-                  className="group h-[560px] w-[450px] [perspective:1000px] m-4"
-                  onClick={() => handleFlip(index)}>
-                  <div
-                    className={`relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] ${
-                      flipped[index] ? "[transform:rotateY(180deg)]" : ""
-                    }`}>
-                    <div className="absolute inset-0">
-                      <div className="bg-white h-full w-full rounded-xl object-cover shadow-xl shadow-white/40 flex items-center justify-center">
-                        <img
-                          src="/images/card.jpg"
-                          alt={`Frontside of ${word}`}
-                          className="h-full w-full rounded-xl object-cover"
-                        />
-                        <span className="text-4xl absolute text-black font-['League_Spartan']">
-                          {word}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 h-full w-full rounded-xl bg-white dark:bg-white px-12 text-center text-black dark:text-black [backface-visibility:hidden] [transform:rotateY(180deg)] flex items-center justify-center">
-                      <div className="text-2xl max-h-full overflow-y-auto p-4 font-['League_Spartan']">
-                        <span>{backTexts[index]}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )
-            )}
+        <div className="flex justify-center mt-8">
+          <div className=" p-8 w-full h-[20vw] relative flex items-center justify-center">
+            <button
+              onClick={handlePrev}
+              className="absolute right-3/4 top-1/2 transform -translate-y-1/2
+              bg-white rounded-full p-2 h-10 w-10 text-black">
+              {" "}
+              &lt;
+            </button>
+            <div
+              className={`text-center w-1/2 text-white text-2xl font-['League_Spartan'] transition-opacity duration-500 ${
+                isFading ? "opacity-0" : "opacity-100"
+              }`}>
+              {texts[currentTextIndex]}
+            </div>
+            <button
+              onClick={handleNext}
+              className="absolute left-3/4 top-1/2 transform -translate-y-1/2
+              bg-white rounded-full p-2 h-10 w-10 text-black">
+              &gt;
+            </button>
           </div>
         </div>
       </div>

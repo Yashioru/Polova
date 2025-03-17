@@ -49,7 +49,9 @@ const Part4 = () => {
           }`}>
           Kontakt
         </h1>
-        <p className="text-white dark:text-white">Yo</p>
+        <p className="text-white dark:text-white text-center items-center flex justify-center text-2xl">
+          Email: example@gmail.com
+        </p>
       </div>
     </div>
   );
