@@ -69,7 +69,7 @@ const Part3 = () => {
       <div className="absolute top-0 left-0 w-full h-2 bg-gray-800"></div>
       <div className="absolute inset-0 bg-black opacity-10"></div>{" "}
       {/* Add semi-transparent black overlay */}
-      <div className="relative w-auto h-auto pt-20 pb-12">
+      <div className="relative w-auto h-screen pt-20 pb-12">
         <h1
           className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 text-white dark:text-white font-['League_Spartan'] ${
             isVisible ? "translate-y-0" : "-translate-y-full"
@@ -77,23 +77,23 @@ const Part3 = () => {
           Tlumočení
         </h1>
         <div className="flex justify-center mt-8">
-          <div className=" p-8 w-full h-[20vw] relative flex items-center justify-center">
+          <div className="p-8 w-full h-[20vw] relative flex items-center justify-center">
             <button
               onClick={handlePrev}
-              className="absolute right-3/4 top-1/2 transform -translate-y-1/2
+              className="absolute right-3/4 top-2/3 transform -translate-y-1/2
               bg-white rounded-full p-2 h-10 w-10 text-black">
               {" "}
               &lt;
             </button>
             <div
-              className={`text-center w-1/2 text-white text-2xl font-['League_Spartan'] transition-opacity duration-500 ${
+              className={`text-center w-1/2 text-white text-2xl font-['League_Spartan'] transition-opacity duration-500 pt-36 ${
                 isFading ? "opacity-0" : "opacity-100"
               }`}>
               {texts[currentTextIndex]}
             </div>
             <button
               onClick={handleNext}
-              className="absolute left-3/4 top-1/2 transform -translate-y-1/2
+              className="absolute left-3/4 top-2/3 transform -translate-y-1/2
               bg-white rounded-full p-2 h-10 w-10 text-black">
               &gt;
             </button>

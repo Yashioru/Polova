@@ -47,7 +47,7 @@ const Navbar = () => {
       }}>
       <div className="absolute inset-0 bg-black opacity-10"></div>{" "}
       {/* Add semi-transparent black overlay */}
-      <ul className="relative flex justify-around items-center w-full text-center text-white text-lg font-league-spartan">
+      <ul className="relative flex justify-around items-center w-full text-center text-white text-lg font-league-spartan font-bold">
         <li>
           <a
             href="#top"
@@ -55,7 +55,11 @@ const Navbar = () => {
               e.preventDefault();
               scrollToTop();
             }}>
-            <img src="/images/picodrat.png" alt="Logo" className="h-10" />
+            <img
+              src="/images/picodrat.png"
+              alt="Logo"
+              className="h-10 md:h-8"
+            />
           </a>
         </li>
         <li>
@@ -99,6 +103,20 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          nav ul {
+            font-size: 0.75rem; /* Smaller font size */
+            padding: 0 10px; /* Adjust padding */
+          }
+          nav ul li {
+            margin: 0 5px; /* Adjust spacing */
+          }
+          nav img {
+            height: 1.5rem; /* Smaller logo size */
+          }
+        }
+      `}</style>
     </nav>
   );
 };
