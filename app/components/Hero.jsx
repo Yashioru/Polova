@@ -12,21 +12,7 @@ const scrollToSection = (sectionId) => {
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const heroRef = useRef(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -66,7 +52,7 @@ const Hero = () => {
       <div className="relative grid w-full h-full z-20">
         <div
           className="absolute top-0 left-0 w-[50.75%] h-[43.6%] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
-          onClick={() => !isMobile && scrollToSection("part3")}>
+          onClick={() => scrollToSection("part3")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white dark:text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
@@ -81,7 +67,7 @@ const Hero = () => {
         </div>
         <div
           className="absolute top-0 right-0 w-[48.8%] h-[69.7%] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
-          onClick={() => !isMobile && scrollToSection("part2")}>
+          onClick={() => scrollToSection("part2")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
@@ -96,7 +82,7 @@ const Hero = () => {
         </div>
         <div
           className="absolute bottom-0 left-0 w-[50.8%] h-[55.5%] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
-          onClick={() => !isMobile && scrollToSection("part1")}>
+          onClick={() => scrollToSection("part1")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
@@ -111,7 +97,7 @@ const Hero = () => {
         </div>
         <div
           className="absolute bottom-0 right-0 w-[48.7%] h-[29.5%] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
-          onClick={() => !isMobile && scrollToSection("part4")}>
+          onClick={() => scrollToSection("part4")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
