@@ -14,14 +14,14 @@ export default function Home() {
       <div id="hero">
         <Hero />
       </div>
+      <div id="part2">
+        <Part2 />
+      </div>
       <div id="part3">
         <Part3 />
       </div>
       <div id="part1">
         <Part1 />
-      </div>
-      <div id="part2">
-        <Part2 />
       </div>
       <div id="part4">
         <Part4 />

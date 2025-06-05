@@ -51,52 +51,55 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black dark:bg-gray-900 opacity-20 z-10"></div>
       <div className="relative grid w-full h-full z-20">
         <div
-          className="absolute top-0 left-0 w-[50.75%] h-[43.6%] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
-          onClick={() => scrollToSection("part3")}>
-          <div
-            className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white dark:text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
-              isVisible ? "translate-y-0" : "-translate-y-10"
-            }`}>
-            Tlumočení
-          </div>
-          <img
-            src="/images/hln.png"
-            alt="Tlumočení"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"
-          />
-        </div>
-        <div
-          className="absolute top-0 right-0 w-[48.8%] h-[69.7%] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
+          className="absolute top-0 left-0 w-[50.2vw] h-[43.6vh] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
           onClick={() => scrollToSection("part2")}>
           <div
-            className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
+            className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white dark:text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}>
             Překlad
           </div>
           <img
-            src="/images/ns.png"
-            alt="Překlad"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"
+            src="/images/hln.png"
+            alt="Tlumočení"
+            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 hidden sm:block"
+            style={{ width: "100%", height: "100%" }}
           />
         </div>
         <div
-          className="absolute bottom-0 left-0 w-[50.8%] h-[55.5%] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
+          className="absolute top-0 right-0 w-[48.3vw] h-[69.7vh] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
+          onClick={() => scrollToSection("part3")}>
+          <div
+            className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
+              isVisible ? "translate-y-0" : "-translate-y-10"
+            }`}>
+            Tlumočení
+          </div>
+          <img
+            src="/images/ns.png"
+            alt="Překlad"
+            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 hidden sm:block"
+            style={{ width: "100%", height: "100%" }}
+          />
+        </div>
+        <div
+          className="absolute bottom-0 left-0 w-[50.2vw] h-[55.5vh] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
           onClick={() => scrollToSection("part1")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
               isVisible ? "translate-y-0" : "-translate-y-10"
             }`}>
-            Důvěrné Ucho
+            Prostřednictví
           </div>
           <img
             src="/images/nk.png"
             alt="Důvěrné Ucho"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"
+            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 hidden sm:block"
+            style={{ width: "100%", height: "100%" }}
           />
         </div>
         <div
-          className="absolute bottom-0 right-0 w-[48.7%] h-[29.5%] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
+          className="absolute bottom-0 right-0 w-[48.3vw] h-[29.5vh] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
           onClick={() => scrollToSection("part4")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
@@ -107,7 +110,8 @@ const Hero = () => {
           <img
             src="/images/nv.png"
             alt="Kontakt"
-            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"
+            className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 hidden sm:block"
+            style={{ width: "100%", height: "100%" }}
           />
         </div>
       </div>

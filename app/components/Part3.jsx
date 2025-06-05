@@ -59,42 +59,41 @@ const Part3 = () => {
     <div
       id="part3"
       ref={part1Ref}
-      className={`relative transition-opacity duration-1000 ${
+      className={`pb-20 relative transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
       style={{
         background:
           "linear-gradient(to right, white, var(--polish-red), var(--czech-red), var(--czech-blue))",
       }}>
-      <div className="absolute top-0 left-0 w-full h-2 bg-gray-800"></div>
       <div className="absolute inset-0 bg-black opacity-10"></div>{" "}
       {/* Add semi-transparent black overlay */}
-      <div className="relative w-auto h-screen pt-20 pb-12">
+      <div className="relative w-auto h-screen pb-[30rem]">
         <h1
-          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 text-white dark:text-white font-['League_Spartan'] ${
+          className={`text-6xl font-bold w-auto flex justify-center transform transition-transform duration-1000 text-white dark:text-white font-['League_Spartan']  ${
             isVisible ? "translate-y-0" : "-translate-y-full"
           }`}>
           Tlumočení
         </h1>
         <div className="flex justify-center mt-8">
-          <div className="p-8 w-full h-[20vw] relative flex items-center justify-center">
+          <div className="p-8 w-full h-[20vw] relative flex items-center justify-center ">
             <button
               onClick={handlePrev}
-              className="absolute right-3/4 top-2/3 transform -translate-y-1/2
-              bg-white rounded-full p-2 h-10 w-10 text-black">
+              className="absolute right-3/4 top-[16rem] transform -translate-y-1/2
+              bg-white rounded-full p-2 h-10 w-10 text-black md:right-3/4 md:top-[13.5rem]">
               {" "}
               &lt;
             </button>
             <div
-              className={`text-center w-1/2 text-white text-2xl font-['League_Spartan'] transition-opacity duration-500 pt-36 ${
+              className={`text-center w-1/2 text-white text-2xl font-['League_Spartan'] transition-opacity duration-500 ${
                 isFading ? "opacity-0" : "opacity-100"
-              }`}>
+              } pt-[40rem] md:pt-[10rem] md:text-xl`}>
               {texts[currentTextIndex]}
             </div>
             <button
               onClick={handleNext}
-              className="absolute left-3/4 top-2/3 transform -translate-y-1/2
-              bg-white rounded-full p-2 h-10 w-10 text-black">
+              className="absolute left-3/4 top-[16rem] transform -translate-y-1/2
+              bg-white rounded-full p-2 h-10 w-10 text-black md:right-3/4 md:top-[13.5rem]">
               &gt;
             </button>
           </div>
