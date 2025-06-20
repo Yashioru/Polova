@@ -51,7 +51,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black dark:bg-gray-900 opacity-20 z-10"></div>
       <div className="relative grid w-full h-full z-20">
         <div
-          className="absolute top-0 left-0 w-[50.2vw] h-[43.6vh] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
+          className="absolute top-0 left-0 w-[50.3vw] h-[43.8vh] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
           onClick={() => scrollToSection("part2")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white dark:text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
@@ -67,7 +67,7 @@ const Hero = () => {
           />
         </div>
         <div
-          className="absolute top-0 right-0 w-[48.3vw] h-[69.7vh] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
+          className="absolute top-0 right-0 w-[48.3vw] h-[69.6vh] flex items-center justify-center font-bold text-white dark:text-white z-30 group hover:cursor-pointer"
           onClick={() => scrollToSection("part3")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
@@ -83,7 +83,7 @@ const Hero = () => {
           />
         </div>
         <div
-          className="absolute bottom-0 left-0 w-[50.2vw] h-[55.5vh] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
+          className="absolute bottom-0 left-0 w-[50.3vw] h-[55.5vh] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
           onClick={() => scrollToSection("part1")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${
@@ -99,7 +99,7 @@ const Hero = () => {
           />
         </div>
         <div
-          className="absolute bottom-0 right-0 w-[48.3vw] h-[29.5vh] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
+          className="absolute bottom-0 right-0 w-[48.3vw] h-[29.3vh] flex items-center justify-center font-bold text-black dark:text-white z-30 group hover:cursor-pointer"
           onClick={() => scrollToSection("part4")}>
           <div
             className={`font-league-spartan font-bold text-3xl sm:text-5xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white transform transition-transform duration-1000 text-center flex items-center justify-center z-40 ${

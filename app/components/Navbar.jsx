@@ -79,7 +79,7 @@ const Navbar = () => {
               e.preventDefault();
               scrollToSection("part1");
             }}>
-            Důvěrné ucho
+            Prostřednictví
           </a>
         </li>
         <li>
